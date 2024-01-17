@@ -8,7 +8,7 @@
 import Foundation
 
 extension URL {
-    func appending(parameters: [String: Any]) -> URL {
+    public func appending(parameters: [String: Any]) -> URL {
         guard var urlComponents = URLComponents(string: absoluteString) else { return absoluteURL }
         var queryItems: [URLQueryItem] = urlComponents.queryItems ??  []
         parameters.forEach { (key: String, value: Any) in
